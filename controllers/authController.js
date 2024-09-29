@@ -75,15 +75,12 @@ exports.me = async (req, res) => {
     try {
         const user = await User.findById(req.user._id).select('-password');
         if (user) {
-            res.json(
-                //     {
-                //     _id: user._id,
-                //     name: user.name,
-                //     email: user.email,
-                //     isAdmin: user.isAdmin,
-                // }
-                user
-            );
+            res.json({
+                _id: user._id,
+                name: user.name,
+                email: user.email,
+                isAdmin: user.isAdmin,
+            });
         } else {
             res.status(404).json({ message: 'User not found' });
         }
