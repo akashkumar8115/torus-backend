@@ -14,7 +14,7 @@ connectDB();
 
 // CORS configuration
 const corsOptions = {
-    origin: 'https://torus-frontend-nine.vercel.app/', // Allow all origins
+    origin: 'https://torus-frontend-nine.vercel.app', // Allow all origins
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
 };
